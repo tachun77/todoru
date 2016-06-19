@@ -18,16 +18,21 @@ func format(date : NSDate, style : String) -> String {
 class AddTodoViewController: UIViewController {
     
 
-    @IBOutlet var label1 : UITextField!
-    @IBOutlet var label2 : UITextField!
+    @IBOutlet var task : UITextField!
+    @IBOutlet var date : UITextField!
     @IBOutlet var datePicker: UIDatePicker!
-    @IBOutlet var label3 : UITextField!
+    @IBOutlet var memo : UITextField!
     
+    
+    let nowDate = NSDate()
+    let dateFormat = NSDateFormatter()
+    let inputDatePicker = UIDatePicker()
     
     @IBAction func choosedate(sender: UIDatePicker){
-        label2.text = format(datePicker.date, style: "yyyy/MM/dd HH:mm")
+        date.text = format(datePicker.date, style: "yyyy/MM/dd HH:mm")
+        datePicker.hidden = false
     }
-    var importance : String
+    var importance : String = ""
     
     
     @IBAction func importance(sender: UISegmentedControl){
@@ -39,16 +44,24 @@ class AddTodoViewController: UIViewController {
         case 2 : importance = "3"
         case 3 : importance = "4"
         case 4 : importance = "5"
+        default : importance = "0"
             
         }
-        
-        var todoArray: [AnyObject]=[]
+    
+    }
+    var todoArray: [String: String]=[:]
         let saveData = NSUserDefaults.standardUserDefaults()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-if saveData.arrayForKey
         // Do any additional setup after loading the view.
+        
+        //日付フィールドの設定
+        dateFormat.dateFormat = "yyyy/MM/dd HH:MM"
+        date.text = dateFormat.stringFromDate(nowDate)
+        //self.date.delegate = self
+        
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,7 +69,20 @@ if saveData.arrayForKey
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func save(sender: UIButton){
+        
+        todoArray["task"] = task.text!
+        todoArray["date"] = task.text!
+        todoArray["importance"] = task.text!
+        todoArray["memo"] = task.text!
     }
+    
+    
+    
+        @IBAction func gotokanryou(sender:AnyObject){
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
 
     /*
     // MARK: - Navigation
@@ -67,5 +93,4 @@ if saveData.arrayForKey
         // Pass the selected object to the new view controller.
     }
     */
-
 }
