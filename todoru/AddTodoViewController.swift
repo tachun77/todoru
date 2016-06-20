@@ -32,8 +32,9 @@ class AddTodoViewController: UIViewController {
     
     
     @IBAction func choosedate(sender: UIDatePicker){
-        date.text = format(datePicker.date, style: "yyyy/MM/dd HH:mm")
         datePicker.hidden = false
+        date.text = format(datePicker.date, style: "yyyy/MM/dd HH:mm")
+       
     }
     var importance : String = ""
     
@@ -61,7 +62,8 @@ class AddTodoViewController: UIViewController {
         
         //日付フィールドの設定
         dateFormat.dateFormat = "yyyy/MM/dd HH:MM"
-        date.text = dateFormat.stringFromDate(nowDate)
+        date.text = format(datePicker.date, style: "yyyy/MM/dd HH:mm")
+        
         //self.date.delegate = self
         datePicker.hidden = true
         
@@ -75,9 +77,9 @@ class AddTodoViewController: UIViewController {
     @IBAction func save(sender: UIButton){
         
         todoArray["task"] = task.text!
-        todoArray["date"] = task.text!
-        todoArray["importance"] = task.text!
-        todoArray["memo"] = task.text!
+        todoArray["date"] = date.text!
+        todoArray["importance"] = importance
+        todoArray["memo"] = memo.text!
     }
     
     
