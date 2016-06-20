@@ -51,20 +51,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vFS-o0-bhL">
-                                <rect key="frame" x="21" y="115" width="41" height="21"/>
+                                <rect key="frame" x="26" y="115" width="41" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="pxI-RV-3Qn">
-                                <rect key="frame" x="87" y="111" width="147" height="30"/>
+                                <rect key="frame" x="153" y="111" width="147" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GIP-48-sZe">
-                                <rect key="frame" x="23" y="180" width="36" height="21"/>
+                                <rect key="frame" x="28" y="180" width="36" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -99,6 +99,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="bli-wK-aKt">
+                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="487919594.89308">
+                                    <!--2016-06-18 05:13:14 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="SCk-jH-zL0">
+                                <rect key="frame" x="178" y="176" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="choosedate:" destination="HzW-Iq-Fqi" eventType="editingDidEnd" id="2RA-Y9-M7a"/>
+                                </connections>
+                            </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="FtO-7t-SE8">
                                 <rect key="frame" x="186" y="246" width="114" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -110,34 +126,18 @@
                                     <segment title="5"/>
                                 </segments>
                                 <connections>
-                                    <action selector="importance:" destination="HzW-Iq-Fqi" eventType="valueChanged" id="YUy-EV-FUe"/>
+                                    <action selector="importance:" destination="HzW-Iq-Fqi" eventType="valueChanged" id="GfC-p4-MaM"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="D9V-Br-ZR5">
-                                <rect key="frame" x="87" y="177" width="147" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="bli-wK-aKt">
-                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="487919594.89308">
-                                    <!--2016-06-18 05:13:14 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="choosedate:" destination="HzW-Iq-Fqi" eventType="valueChanged" id="Cgh-gm-Db6"/>
-                                </connections>
-                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add ToDo" id="YjC-E7-4YV"/>
                     <connections>
-                        <outlet property="date" destination="D9V-Br-ZR5" id="qQ6-az-Lpn"/>
-                        <outlet property="datePicker" destination="bli-wK-aKt" id="R5D-Vb-Xan"/>
-                        <outlet property="memo" destination="dKB-AL-hye" id="h8I-4Q-EKG"/>
-                        <outlet property="task" destination="pxI-RV-3Qn" id="HVX-qn-WwT"/>
+                        <outlet property="date" destination="SCk-jH-zL0" id="gS4-br-gEG"/>
+                        <outlet property="datePicker" destination="bli-wK-aKt" id="2KY-a9-xwo"/>
+                        <outlet property="memo" destination="dKB-AL-hye" id="Inx-Ny-axz"/>
+                        <outlet property="task" destination="pxI-RV-3Qn" id="ina-rt-M3S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLc-qN-uXC" userLabel="First Responder" sceneMemberID="firstResponder"/>

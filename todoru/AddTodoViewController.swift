@@ -31,7 +31,7 @@ class AddTodoViewController: UIViewController {
     let inputDatePicker = UIDatePicker()
     
     
-    @IBAction func choosedate(sender: UIDatePicker){
+    @IBAction func choosedate(sender : UITextField!){
         datePicker.hidden = false
         date.text = format(datePicker.date, style: "yyyy/MM/dd HH:mm")
        
@@ -61,7 +61,7 @@ class AddTodoViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         //日付フィールドの設定
-        dateFormat.dateFormat = "yyyy/MM/dd HH:MM"
+        
         date.text = format(datePicker.date, style: "yyyy/MM/dd HH:mm")
         
         //self.date.delegate = self
