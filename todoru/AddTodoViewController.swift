@@ -17,6 +17,8 @@ func format(date : NSDate, style : String) -> String {
 
 class AddTodoViewController: UIViewController {
     
+    
+    
 
     @IBOutlet var task : UITextField!
     @IBOutlet var date : UITextField!
@@ -27,6 +29,7 @@ class AddTodoViewController: UIViewController {
     let nowDate = NSDate()
     let dateFormat = NSDateFormatter()
     let inputDatePicker = UIDatePicker()
+    
     
     @IBAction func choosedate(sender: UIDatePicker){
         date.text = format(datePicker.date, style: "yyyy/MM/dd HH:mm")
@@ -60,8 +63,8 @@ class AddTodoViewController: UIViewController {
         dateFormat.dateFormat = "yyyy/MM/dd HH:MM"
         date.text = dateFormat.stringFromDate(nowDate)
         //self.date.delegate = self
+        datePicker.hidden = true
         
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,6 +79,7 @@ class AddTodoViewController: UIViewController {
         todoArray["importance"] = task.text!
         todoArray["memo"] = task.text!
     }
+    
     
     
     
@@ -94,3 +98,4 @@ class AddTodoViewController: UIViewController {
     }
     */
 }
+
