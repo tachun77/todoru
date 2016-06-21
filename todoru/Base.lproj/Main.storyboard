@@ -40,7 +40,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4Q-ea-jTa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864" y="300"/>
+            <point key="canvasLocation" x="864" y="299.99999999999994"/>
         </scene>
         <!--Add ToDo-->
         <scene sceneID="hXa-R5-Bju">
@@ -83,7 +83,7 @@
                                 <connections>
                                     <action selector="gotokanryou:" destination="HzW-Iq-Fqi" eventType="touchUpInside" id="Rw0-zb-Esw"/>
                                     <action selector="save:" destination="HzW-Iq-Fqi" eventType="touchUpInside" id="Prn-t9-8dI"/>
-                                    <segue destination="rcb-ZW-P5b" kind="push" id="dtk-K6-Z3c"/>
+                                    <segue destination="rcb-ZW-P5b" kind="modal" id="dtk-K6-Z3c"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9qF-of-E0N">
@@ -101,20 +101,11 @@
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="bli-wK-aKt">
                                 <rect key="frame" x="0.0" y="352" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="487919594.89308">
                                     <!--2016-06-18 05:13:14 +0000-->
                                 </date>
                             </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="SCk-jH-zL0">
-                                <rect key="frame" x="178" y="176" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="choosedate:" destination="HzW-Iq-Fqi" eventType="editingDidEnd" id="2RA-Y9-M7a"/>
-                                </connections>
-                            </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="FtO-7t-SE8">
                                 <rect key="frame" x="186" y="246" width="114" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -129,6 +120,15 @@
                                     <action selector="importance:" destination="HzW-Iq-Fqi" eventType="valueChanged" id="GfC-p4-MaM"/>
                                 </connections>
                             </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="SCk-jH-zL0">
+                                <rect key="frame" x="178" y="176" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="choosedate:" destination="HzW-Iq-Fqi" eventType="editingDidBegin" id="Nfv-Zz-BsY"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -144,13 +144,22 @@
             </objects>
             <point key="canvasLocation" x="1251" y="297"/>
         </scene>
-        <!--View Controller-->
+        <!--Complete View Controller-->
         <scene sceneID="BUL-bw-Z0Y">
             <objects>
-                <viewController id="rcb-ZW-P5b" sceneMemberID="viewController">
+                <viewController id="rcb-ZW-P5b" customClass="CompleteViewController" customModule="todoru" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ech-G0-QtS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tsl-lF-VQy">
+                                <rect key="frame" x="139" y="76" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="yXM-4e-KQ7"/>
