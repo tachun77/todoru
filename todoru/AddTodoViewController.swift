@@ -90,6 +90,10 @@ class AddTodoViewController: UIViewController {
         func changeLabelDate() {
             date.text = String(date)
         }
+        
+        if saveData.arrayForKey("todo") != nil{
+            todoArray = saveData.arrayForKey("todo")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +107,10 @@ class AddTodoViewController: UIViewController {
         todoArray["date"] = date.text!
         todoArray["importance"] = importance
         todoArray["memo"] = memo.text!
+        
+        saveData.setObject(todoArray, forKey:"todo" )
+        
+        
     }
     
     // 「完了」を押すと閉じる

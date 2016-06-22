@@ -10,9 +10,14 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
+    var todoArray: [AnyObject]=[]
+    let saveData = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.registerNib(UINib(nibName): "ListTableViewCell", bundle: nil), forCellReuseIdentifier:"cell")
+        
         
     }
         // Uncomment the following line to preserve selection between presentations
@@ -21,6 +26,14 @@ class ListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if saveData.arrayForkey("todo") != nil{
+            todoArray = saveData.arrayForkey("todo")!
+        }
+        tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

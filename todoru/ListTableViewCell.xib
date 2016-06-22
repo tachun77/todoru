@@ -28,6 +28,10 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="zPn-iB-esd" id="DuC-Hg-6hN"/>
+                <outlet property="todoLabel" destination="mOs-5H-YPU" id="xIX-En-Z73"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
