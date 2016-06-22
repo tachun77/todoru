@@ -21,7 +21,7 @@ class AddTodoViewController: UIViewController {
     
 
     @IBOutlet var task : UITextField!
-    @IBOutlet var date : UITextField!
+    @IBOutlet weak var date : UITextField!
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var memo : UITextField!
     
@@ -29,10 +29,10 @@ class AddTodoViewController: UIViewController {
     let nowDate = NSDate()
     let dateFormat = NSDateFormatter()
     let inputDatePicker = UIDatePicker()
-    
+    var toolBar:UIToolbar!
     
     @IBAction func choosedate(sender : UITextField!){
-        datePicker.hidden = false
+        //datePicker.hidden = false
         date.text = format(datePicker.date, style: "yyyy/MM/dd HH:mm")
        
     }
@@ -59,14 +59,37 @@ class AddTodoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        //日付フィールドの設定
-        
-        date.text = format(datePicker.date, style: "yyyy/MM/dd HH:mm")
-        
-        //self.date.delegate = self
         datePicker.hidden = true
         
+        // 入力欄の設定
+        //textField = UITextField(frame: CGRectMake(self.view.frame.size.width/3, 100, 0, 0))
+        date.placeholder = String(format(datePicker.date, style: "yyyy/MM/dd HH:mm"))
+        //textField.sizeToFit()
+        self.view.addSubview(date)
+        
+        // UIDatePickerの設定
+        datePicker = UIDatePicker()
+        datePicker.datePickerMode = UIDatePickerMode.DateAndTime
+        date.inputView = datePicker
+        
+        // UIToolBarの設定
+        toolBar = UIToolbar(frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.size.width, 40.0))
+        toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
+        toolBar.barStyle = .BlackTranslucent
+        toolBar.tintColor = UIColor.whiteColor()
+        toolBar.backgroundColor = UIColor.blackColor()
+        
+        let toolBarBtn = UIBarButtonItem(title: "完了",style: UIBarButtonItemStyle.Plain, target: self, action: #selector(AddTodoViewController.tappedToolBarBtn(_:)))
+        
+        toolBarBtn.tag = 1
+        toolBar.items = [toolBarBtn]
+        
+        
+        date.inputAccessoryView = toolBar
+        
+        func changeLabelDate() {
+            date.text = String(date)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,9 +105,11 @@ class AddTodoViewController: UIViewController {
         todoArray["memo"] = memo.text!
     }
     
-    
-    
-    
+    // 「完了」を押すと閉じる
+    func tappedToolBarBtn(sender: UIBarButtonItem) {
+        date.resignFirstResponder()
+    }
+
         @IBAction func gotokanryou(sender:AnyObject){
             self.dismissViewControllerAnimated(true, completion: nil)
         }
