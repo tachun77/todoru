@@ -5,20 +5,20 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--List Table View Controller-->
         <scene sceneID="Hmq-19-pPf">
             <objects>
-                <tableViewController id="fJb-G9-Pms" sceneMemberID="viewController">
+                <tableViewController id="fJb-G9-Pms" customClass="ListTableViewController" customModule="todoru" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sCa-pO-gus">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mmk-iA-Dff">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="mmk-iA-Dff" customClass="ListTableViewCell" customModule="todoru" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="320" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mmk-iA-Dff" id="gcU-Kp-7eK">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" id="sCU-GL-9hu">
                         <barButtonItem key="rightBarButtonItem" title="+" id="RUa-AO-g1t">
                             <connections>
-                                <segue destination="HzW-Iq-Fqi" kind="modal" id="a0r-cE-see"/>
+                                <segue destination="HzW-Iq-Fqi" kind="push" id="0mo-Ea-Dt5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -82,7 +82,7 @@
                                 <state key="normal" title="Complete!"/>
                                 <connections>
                                     <action selector="save:" destination="HzW-Iq-Fqi" eventType="touchUpInside" id="Prn-t9-8dI"/>
-                                    <segue destination="rcb-ZW-P5b" kind="modal" identifier="tokanryou" id="Omj-eE-fXa"/>
+                                    <segue destination="rcb-ZW-P5b" kind="push" identifier="tokanryou" id="tFS-aV-7cR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9qF-of-E0N">
@@ -122,7 +122,7 @@
                                 </connections>
                             </segmentedControl>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="Nsr-Ik-1Vg">
-                                <rect key="frame" x="0.0" y="239" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="249" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="488271155.074094">
                                     <!--2016-06-22 06:52:35 +0000-->
@@ -156,8 +156,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="一覧に戻る"/>
                                 <connections>
-                                    <action selector="backtolist:" destination="rcb-ZW-P5b" eventType="touchUpInside" id="eZi-Nn-SZQ"/>
-                                    <segue destination="fJb-G9-Pms" kind="push" identifier="modoru" id="q0B-PT-xgP"/>
+                                    <action selector="backtolist:" destination="rcb-ZW-P5b" eventType="touchUpInside" id="iZY-zj-3tp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="完了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tsl-lF-VQy">
@@ -197,7 +196,4 @@
             <point key="canvasLocation" x="496" y="301"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="q0B-PT-xgP"/>
-    </inferredMetricsTieBreakers>
 </document>

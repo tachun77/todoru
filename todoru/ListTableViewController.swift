@@ -10,11 +10,13 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    var todoArray: [String:String]=[:]
+    var todoArray: [AnyObject]=[]
     let saveData = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.registerNib(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
         //保存データの読み込み
         let todoArray: AnyObject! = NSUserDefaults.standardUserDefaults().arrayForKey("todo")
@@ -31,8 +33,9 @@ class ListTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewDidLoad()
         if saveData.arrayForKey("todo") != nil{
-            todoArray = saveData.arrayForKey("todo")
+            todoArray = saveData.arrayForKey("todo")!
                     }
+        tableView.reloadData()
     }
     
     
@@ -57,7 +60,7 @@ class ListTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTabelViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
         
         let nowIndexPathDictionary: (AnyObject) = todoArray[indexPath.row]
         

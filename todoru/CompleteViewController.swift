@@ -12,10 +12,8 @@ class CompleteViewController: UIViewController {
     
     @IBAction func backtolist(sender: UIButton){
         
-     performSegueWithIdentifier("modoru", sender: nil)
+self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -112,8 +112,8 @@ class AddTodoViewController: UIViewController {
         NSUserDefaults.standardUserDefaults().synchronize()
         
         performSegueWithIdentifier("tokanryou", sender: nil)
-
         
+        //self.presentViewController(CompleteViewController, animated: true, completion: nil)        // Viewの移動
     }
     
     // 「完了」を押すと閉じる
