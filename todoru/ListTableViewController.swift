@@ -30,8 +30,9 @@ class ListTableViewController: UITableViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewDidLoad()
-        if todoArray.arrayForkey("todo") != nil{
-        }
+        if saveData.arrayForKey("todo") != nil{
+            todoArray = saveData.arrayForKey("todo")
+                    }
     }
     
     
@@ -46,23 +47,27 @@ class ListTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return todoArray.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTabelViewCell
+        
+        let nowIndexPathDictionary: (AnyObject) = todoArray[indexPath.row]
+        
+        cell.dateLabel.text = nowIndexPathDictionary["date"] as? String
+        cell.todoLabel.text = nowIndexPathDictionary["task"] as? String
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
