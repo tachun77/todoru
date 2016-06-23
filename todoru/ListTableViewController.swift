@@ -10,13 +10,14 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    var todoArray: [AnyObject]=[]
+    var todoArray: [String:String]=[:]
     let saveData = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.registerNib(UINib(nibName): "ListTableViewCell", bundle: nil), forCellReuseIdentifier:"cell")
+        //保存データの読み込み
+        let todoArray: AnyObject! = NSUserDefaults.standardUserDefaults().arrayForKey("todo")
         
         
     }
@@ -26,13 +27,14 @@ class ListTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
 
+
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        if saveData.arrayForkey("todo") != nil{
-            todoArray = saveData.arrayForkey("todo")!
+        super.viewDidLoad()
+        if todoArray.arrayForkey("todo") != nil{
         }
-        tableView.reloadData()
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

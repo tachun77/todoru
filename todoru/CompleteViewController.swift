@@ -9,7 +9,13 @@
 import UIKit
 
 class CompleteViewController: UIViewController {
-
+    
+    @IBAction func backtolist(sender: UIButton){
+        
+     performSegueWithIdentifier("modoru", sender: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

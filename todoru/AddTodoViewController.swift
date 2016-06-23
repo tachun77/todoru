@@ -54,7 +54,7 @@ class AddTodoViewController: UIViewController {
     
     }
     var todoArray: [String: String]=[:]
-        let saveData = NSUserDefaults.standardUserDefaults()
+    let saveData = NSUserDefaults.standardUserDefaults().arrayForKey("todo") as? [[String]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,10 +91,8 @@ class AddTodoViewController: UIViewController {
             date.text = String(date)
         }
         
-        if saveData.arrayForKey("todo") != nil{
-            todoArray = saveData.arrayForKey("todo")
+        
         }
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -103,13 +101,18 @@ class AddTodoViewController: UIViewController {
     
     @IBAction func save(sender: UIButton){
         
+        
+        
         todoArray["task"] = task.text!
         todoArray["date"] = date.text!
         todoArray["importance"] = importance
         todoArray["memo"] = memo.text!
+
+        NSUserDefaults.standardUserDefaults().setObject(todoArray, forKey:"todo")
+        NSUserDefaults.standardUserDefaults().synchronize()
         
-        saveData.setObject(todoArray, forKey:"todo" )
-        
+        performSegueWithIdentifier("tokanryou", sender: nil)
+
         
     }
     
@@ -118,10 +121,6 @@ class AddTodoViewController: UIViewController {
         date.resignFirstResponder()
     }
 
-        @IBAction func gotokanryou(sender:AnyObject){
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
-        
 
     /*
     // MARK: - Navigation

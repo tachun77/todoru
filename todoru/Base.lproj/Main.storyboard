@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mmk-iA-Dff">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mmk-iA-Dff" id="gcU-Kp-7eK">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -81,9 +81,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Complete!"/>
                                 <connections>
-                                    <action selector="gotokanryou:" destination="HzW-Iq-Fqi" eventType="touchUpInside" id="Rw0-zb-Esw"/>
                                     <action selector="save:" destination="HzW-Iq-Fqi" eventType="touchUpInside" id="Prn-t9-8dI"/>
-                                    <segue destination="rcb-ZW-P5b" kind="modal" id="dtk-K6-Z3c"/>
+                                    <segue destination="rcb-ZW-P5b" kind="modal" identifier="tokanryou" id="Omj-eE-fXa"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9qF-of-E0N">
@@ -123,7 +122,7 @@
                                 </connections>
                             </segmentedControl>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="Nsr-Ik-1Vg">
-                                <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                                <rect key="frame" x="0.0" y="239" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="488271155.074094">
                                     <!--2016-06-22 06:52:35 +0000-->
@@ -142,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLc-qN-uXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1251" y="297"/>
+            <point key="canvasLocation" x="1243" y="291"/>
         </scene>
         <!--Complete View Controller-->
         <scene sceneID="BUL-bw-Z0Y">
@@ -152,8 +151,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="adb-Tk-kc5">
+                                <rect key="frame" x="123" y="132" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="一覧に戻る"/>
+                                <connections>
+                                    <action selector="backtolist:" destination="rcb-ZW-P5b" eventType="touchUpInside" id="eZi-Nn-SZQ"/>
+                                    <segue destination="fJb-G9-Pms" kind="push" identifier="modoru" id="q0B-PT-xgP"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="完了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tsl-lF-VQy">
-                                <rect key="frame" x="147" y="76" width="34" height="21"/>
+                                <rect key="frame" x="143" y="78" width="34" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -162,7 +170,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="yXM-4e-KQ7"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ksA-UO-dMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,4 +197,7 @@
             <point key="canvasLocation" x="496" y="301"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="q0B-PT-xgP"/>
+    </inferredMetricsTieBreakers>
 </document>
