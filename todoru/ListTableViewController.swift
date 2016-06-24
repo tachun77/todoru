@@ -10,7 +10,7 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    var todoArray: [String:String]=[:]
+    var todoArray: [[String:String]]=[[:]]
     let saveData = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
