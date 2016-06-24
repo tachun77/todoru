@@ -58,8 +58,56 @@ class ListTableViewController: UITableViewController {
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell! {
+        
+        let CellIdentifier: String = "cell";
+        var cell: MCSwipeTableViewCell! = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as MCSwipeTableViewCell!;
+        if cell == nil {
+            cell = MCSwipeTableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: CellIdentifier);
+            cell!.selectionStyle = UITableViewCellSelectionStyle.Gray;
+            cell!.contentView.backgroundColor = UIColor.whiteColor();
+        }
+        
+        let checkView: UIView = self.viewWithImageName("check");
+        let greenColor: UIColor = UIColor(red: 85.0 / 255.0, green: 213.0 / 255.0, blue: 80.0 / 255.0, alpha: 1.0);
+        
+        let crossView: UIView = self.viewWithImageName("cross");
+        let redColor: UIColor = UIColor(red: 232.0 / 255.0, green: 61.0 / 255.0, blue: 14 / 255.0, alpha: 1.0);
+        
+        let clockView: UIView = self.viewWithImageName("clock");
+        let yellowColr: UIColor = UIColor(red: 254.0 / 255.0, green: 217.0 / 255.0, blue: 56.0 / 255.0, alpha: 1.0);
+        
+        let listView = self.viewWithImageName("list");
+        let brownColor: UIColor = UIColor(red: 206.0 / 255.0, green: 149.0 / 255.0, blue: 98.0 / 255.0, alpha: 1.0);
+        
+        cell.textLabel?.text = "Switch mode cell";
+        cell.detailTextLabel?.text = "Swipe to swich";
+        
+        cell.setSwipeGestureWithView(checkView, color: greenColor, mode: MCSwipeTableViewCellMode.Exit, state: MCSwipeTableViewCellState.State1, completionBlock:
+            
+            { (cell: MCSwipeTableViewCell!, state: MCSwipeTableViewCellState!, mode: MCSwipeTableViewCellMode!) in   println("Did swipe \"Checkmark\" cell")
+                []
+        });
+        
+        cell.setSwipeGestureWithView(crossView, color: redColor, mode: MCSwipeTableViewCellMode.Exit, state: MCSwipeTableViewCellState.State2, completionBlock:
+            
+            { (cell : MCSwipeTableViewCell!, state: MCSwipeTableViewCellState!, mode: MCSwipeTableViewCellMode!) in println("Did swipe \"cross\" ");
+            }
+        )
+        
+        cell.setSwipeGestureWithView(clockView, color: yellowColr, mode: .Exit, state: .State3) {
+            (cell : MCSwipeTableViewCell!, state : MCSwipeTableViewCellState!, mode : MCSwipeTableViewCellMode!) in println("Did swipe \"Clock \"");
+        };
+        
+        cell.setSwipeGestureWithView(listView, color: brownColor, mode: .Switch, state: .State4) {
+            (cell: MCSwipeTableViewCell!, state: MCSwipeTableViewCellState!, mode: MCSwipeTableViewCellMode!) in println("Did swipe \"List\" cell");
+        }
+        return cell;
+    }
+
+        
+        
+        /*let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
         
         let nowIndexPathDictionary: (AnyObject) = todoArray[indexPath.row]
         
@@ -69,7 +117,7 @@ class ListTableViewController: UITableViewController {
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
