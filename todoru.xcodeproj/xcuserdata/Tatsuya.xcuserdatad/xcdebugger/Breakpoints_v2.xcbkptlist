@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "todoru/ListTableViewController.swift"
-            timestampString = "488398105.364058"
+            timestampString = "488462844.473086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "ListTableViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -327,11 +327,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "todoru/AddTodoViewController.swift"
-            timestampString = "488349831.454547"
+            timestampString = "488461385.718797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "save(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -343,11 +343,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "todoru/AddTodoViewController.swift"
-            timestampString = "488401807.596893"
+            timestampString = "488461385.718797"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
             landmarkName = "AddTodoViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -371,39 +371,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "todoru/ListTableViewController.swift"
-            timestampString = "488398105.364058"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "todoru/ListTableViewController.swift"
-            timestampString = "488398105.364058"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "todoru/ListTableViewController.swift"
@@ -416,7 +384,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "todoru.ListTableViewController.todoArray.getter : Swift.Array&lt;Swift.AnyObject&gt;"
@@ -431,7 +399,7 @@
                   offsetFromSymbolStart = "35">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "todoru.ListTableViewController.todoArray.setter : Swift.Array&lt;Swift.AnyObject&gt;"
@@ -446,7 +414,7 @@
                   offsetFromSymbolStart = "65">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "todoru.ListTableViewController.init (style : __C.UITableViewStyle) -&gt; todoru.ListTableViewController"
@@ -461,7 +429,7 @@
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "todoru.ListTableViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; todoru.ListTableViewController"
@@ -476,7 +444,7 @@
                   offsetFromSymbolStart = "57">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "todoru.ListTableViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;todoru.ListTableViewController&gt;"
@@ -496,47 +464,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "todoru/ListTableViewController.swift"
-            timestampString = "488398105.364058"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "todoru/ListTableViewController.swift"
-            timestampString = "488398105.364058"
+            timestampString = "488462844.473086"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "todoru/ListTableViewController.swift"
-            timestampString = "488398105.364058"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -578,7 +514,7 @@
                   moduleName = "todoru"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Tatsuya/Documents/iOSapp/todoru/todoru/todoru/CompleteViewController.swift"
-                  timestampString = "488401631.299463"
+                  timestampString = "488464927.303756"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -593,7 +529,7 @@
                   moduleName = "todoru"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Tatsuya/Documents/iOSapp/todoru/todoru/todoru/CompleteViewController.swift"
-                  timestampString = "488401631.300651"
+                  timestampString = "488464927.303871"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
@@ -608,7 +544,7 @@
                   moduleName = "todoru"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Tatsuya/Documents/iOSapp/todoru/todoru/todoru/CompleteViewController.swift"
-                  timestampString = "488401631.300758"
+                  timestampString = "488464927.303965"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "11"
@@ -616,6 +552,227 @@
                   offsetFromSymbolStart = "105">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "todoru/ListTableViewController.swift"
+            timestampString = "488462844.473086"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "todoru/AddTodoViewController.swift"
+            timestampString = "488461385.718797"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "save(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "todoru/AddTodoViewController.swift"
+            timestampString = "488451241.847023"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "AddTodoViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "todoru.AddTodoViewController.saveData.getter : Swift.Optional&lt;Swift.Array&lt;Swift.Array&lt;Swift.String&gt;&gt;&gt;"
+                  moduleName = "todoru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tatsuya/Documents/iOSapp/todoru/todoru/todoru/AddTodoViewController.swift"
+                  timestampString = "488464927.306447"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "todoru.AddTodoViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; todoru.AddTodoViewController"
+                  moduleName = "todoru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tatsuya/Documents/iOSapp/todoru/todoru/todoru/AddTodoViewController.swift"
+                  timestampString = "488464927.306603"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "todoru.AddTodoViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;todoru.AddTodoViewController&gt;"
+                  moduleName = "todoru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tatsuya/Documents/iOSapp/todoru/todoru/todoru/AddTodoViewController.swift"
+                  timestampString = "488464927.306717"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "378">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "todoru/AddTodoViewController.swift"
+            timestampString = "488451242.497354"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "AddTodoViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "todoru.AddTodoViewController.todoArray.getter : Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "todoru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tatsuya/Documents/iOSapp/todoru/todoru/todoru/AddTodoViewController.swift"
+                  timestampString = "488464927.308833"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "97">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "todoru.AddTodoViewController.todoArray.setter : Swift.Dictionary&lt;Swift.String, Swift.String&gt;"
+                  moduleName = "todoru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tatsuya/Documents/iOSapp/todoru/todoru/todoru/AddTodoViewController.swift"
+                  timestampString = "488464927.308961"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "todoru.AddTodoViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; todoru.AddTodoViewController"
+                  moduleName = "todoru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tatsuya/Documents/iOSapp/todoru/todoru/todoru/AddTodoViewController.swift"
+                  timestampString = "488464927.309058"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "398">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "todoru.AddTodoViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;todoru.AddTodoViewController&gt;"
+                  moduleName = "todoru"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Tatsuya/Documents/iOSapp/todoru/todoru/todoru/AddTodoViewController.swift"
+                  timestampString = "488464927.309146"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "304">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "todoru/AddTodoViewController.swift"
+            timestampString = "488461058.998269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "save(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "todoru/ListTableViewController.swift"
+            timestampString = "488461925.968685"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "todoru/ListTableViewController.swift"
+            timestampString = "488464927.268175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

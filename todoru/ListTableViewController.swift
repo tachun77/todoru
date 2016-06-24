@@ -10,17 +10,13 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    var todoArray: [AnyObject]=[]
+    var todoArray: [String:String]=[:]
     let saveData = NSUserDefaults.standardUserDefaults()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.registerNib(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        
-        //保存データの読み込み
-        let todoArray: AnyObject! = NSUserDefaults.standardUserDefaults().arrayForKey("todo")
-        
         
     }
         // Uncomment the following line to preserve selection between presentations
@@ -32,11 +28,14 @@ class ListTableViewController: UITableViewController {
 
     override func viewWillAppear(animated: Bool) {
         super.viewDidLoad()
-        if saveData.arrayForKey("todo") != nil{
+        
+        //保存データの読み込み
+        if saveData.arrayForKey("todo") as? [[String]] != nil{
             todoArray = saveData.arrayForKey("todo")!
-                    }
-        tableView.reloadData()
-    }
+        }
+     tableView.reloadData()
+        }
+       
     
     
     

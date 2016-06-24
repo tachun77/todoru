@@ -53,7 +53,7 @@ class AddTodoViewController: UIViewController {
         }
     
     }
-    var todoArray: [String: String]=[:]
+    var todoArray: [String: String]=[:]     //辞書型
     let saveData = NSUserDefaults.standardUserDefaults().arrayForKey("todo") as? [[String]]
     
     override func viewDidLoad() {
@@ -100,14 +100,15 @@ class AddTodoViewController: UIViewController {
     }
     
     @IBAction func save(sender: UIButton){
-        
-        
+    
         
         todoArray["task"] = task.text!
         todoArray["date"] = date.text!
         todoArray["importance"] = importance
         todoArray["memo"] = memo.text!
-
+       
+        
+        
         NSUserDefaults.standardUserDefaults().setObject(todoArray, forKey:"todo")
         NSUserDefaults.standardUserDefaults().synchronize()
         
